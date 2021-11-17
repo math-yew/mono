@@ -1,0 +1,16 @@
+body{
+  background-color: #00f;
+}
+
+#download{
+    margin:10% 20%;
+}
+.download-btn{
+  padding:10px;
+  font-size:20px;
+  margin:0 20px;
+}
+#test{
+  background:#3399cc;
+  padding:50px;
+}
