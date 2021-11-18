@@ -14,15 +14,18 @@ ctx.arc(90,65,5,0,Math.PI*2,true);  // Right eye
 ctx.stroke();
 
 document.querySelector("button").addEventListener("click", function() {
-    html2canvas(document.querySelector("#content"), {canvas: canvas, scale: 4}).then(function(canvas) {
+    html2canvas(document.querySelector("#content"), {canvas: canvas, useCORS: true, scale: 4, allowTaint: true, letterRendering: 1}).then(function(canvas) {
         console.log('Drew on the existing canvas');
+        download();
     });
 }, false);
 
 
-  document.querySelector("#go").addEventListener("click", function() {
-    var a = document.createElement('a');
-    a.href = canvas.toDataURL("image/png");
-    a.download = 'image.png';
-    a.click();
-});
+// document.querySelector("#go").addEventListener("click", download());
+
+function download(){
+  var a = document.createElement('a');
+  a.href = canvas.toDataURL("image/png");
+  a.download = 'image.png';
+  a.click();
+}
