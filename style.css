@@ -1,16 +1,42 @@
 body{
-  background-color: #00f;
+  background-color: #ddd;
+  padding:20px 100px;
 }
 
-#download{
-    margin:10% 20%;
+canvas {
+    border: 1px solid black;
 }
-.download-btn{
-  padding:10px;
-  font-size:20px;
-  margin:0 20px;
+button {
+    clear: both;
+    display: block;
 }
-#test{
-  background:#3399cc;
-  padding:50px;
+#content {
+    background-color: #fff;
+    width: 400px;
+    height: 550px;
+    position: relative;
+    /* padding: 50px 10px; */
+}
+
+.ab {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.letter {
+  font-size: 375px;
+}
+
+.name {
+  border-top: solid black 20px;
+  border-bottom: solid black 20px;
+  font-size: 60px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.flip {
+  transform: rotateX(180deg);
 }

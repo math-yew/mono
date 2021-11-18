@@ -4,64 +4,41 @@
     <meta charset="UTF-8">
     <title>Using an existing canvas to draw on</title>
     <style>
-        canvas {
-            border: 1px solid black;
-        }
-        button {
-            clear: both;
-            display: block;
-        }
-        #content {
-            background: rgba(100, 255, 255, 0.5);
-            padding: 50px 10px;
-        }
+
     </style>
+
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="./dist/html2canvas.js"></script>
 </head>
 <body>
-<div><h1>HTML content to render:</h1>
-    <div id="content">Render the content in this element <strong>only</strong> onto the existing canvas element</div>
-</div>
-<h1>Existing canvas:</h1>
-<canvas width="500" height="200"></canvas>
-<script type="text/javascript" src="./dist/html2canvas.js"></script>
-<button>Run html2canvas</button>
+  <div>
+    <h1>Image:</h1>
+    <!-- <div id="content">
+      <svg height="100" width="100">
+        <polygon points="100,10 40,198 190,78 10,78 160,198"
+        style="fill:lime;stroke:purple;stroke-width:5;fill-rule:nonzero;" />
+      </svg>
+      Render the content in this element <strong>only</strong> onto the existing canvas element
+    </div> -->
+    <div id="content">
+      <div class="ab letter">M</div>
+      <div class="ab" width="500px">
+        <div class=""><img src="decoration.svg" width="100%"></div>
+        <!-- <div style="height:100px;background-image:url('decoration.svg')"></div> -->
+        <div class="name">Mecham</div>
+        <div class=""><img src="decoration.svg" width="100%" class="flip"></div>
+      </div>
+    </div>
 
-<br/>
-<button id='go'>Download 1.5X</button>
+  </div>
+  <h1>Existing canvas:</h1>
+  <canvas width="400" height="650" style="border:solid thick purple;display:none;"></canvas>
 
-<script type="text/javascript">
-    var canvas = document.querySelector("canvas");
-    var ctx = canvas.getContext("2d");
+  <button>Run html2canvas</button>
 
-    var ctx = canvas.getContext('2d');
+  <br/>
+  <button id='go'>Download 1.5X</button>
+  <script type="text/javascript" src='script.js'></script>
 
-    ctx.beginPath();
-    ctx.arc(75,75,50,0,Math.PI*2,true); // Outer circle
-    ctx.moveTo(110,75);
-    ctx.arc(75,75,35,0,Math.PI,false);   // Mouth (clockwise)
-    ctx.moveTo(65,65);
-    ctx.arc(60,65,5,0,Math.PI*2,true);  // Left eye
-    ctx.moveTo(95,65);
-    ctx.arc(90,65,5,0,Math.PI*2,true);  // Right eye
-    ctx.stroke();
-
-    document.querySelector("button").addEventListener("click", function() {
-        html2canvas(document.querySelector("#content"), {canvas: canvas, scale: 1}).then(function(canvas) {
-            console.log('Drew on the existing canvas');
-        });
-    }, false);
-
-    var divX2 = document.querySelector("canvas");
-
-    // $('#go').on('click',function(){
-      document.querySelector("#go").addEventListener("click", function() {
-        // save
-        var a = document.createElement('a');
-        a.href = divX2.toDataURL("image/png");
-        a.download = 'image.png';
-        a.click();
-    });
-
-</script>
 </body>
 </html>
