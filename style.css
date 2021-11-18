@@ -18,25 +18,51 @@ button {
     /* padding: 50px 10px; */
 }
 
+.main {
+  /* position: relative; */
+  display: block;
+}
+
 .ab {
   position: absolute;
-  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .letter {
   font-size: 375px;
+  top: 50%;
+  /* top:-200px; */
+  /* transform: translateY(-200px); */
+}
+
+.gap {
+  top: 60%;
+
 }
 
 .name {
-  border-top: solid black 20px;
-  border-bottom: solid black 20px;
-  font-size: 60px;
+  border-top: solid black 10px;
+  border-bottom: solid black 10px;
+  font-size: 45px;
   background-color: #fff;
+  text-transform: uppercase;
   text-align: center;
+  /* padding: 0px 30px; */
+  width: 325px;
+  line-height: 50px;
+  height:50px;
+
 }
 
 .flip {
   transform: rotateX(180deg);
+}
+
+.raleway {
+  font-family: 'Raleway', sans-serif;
+}
+
+.playfair {
+  font-family: 'Playfair Display', serif;
 }

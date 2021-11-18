@@ -8,6 +8,10 @@
     </style>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&family=Raleway:wght@600&display=swap" rel="stylesheet">
+
     <script type="text/javascript" src="./dist/html2canvas.js"></script>
 </head>
 <body>
@@ -21,21 +25,30 @@
       Render the content in this element <strong>only</strong> onto the existing canvas element
     </div> -->
     <div id="content">
-      <div class="ab letter">M</div>
-      <div class="ab" width="500px">
-        <!-- <div class=""><img src="decoration.svg" width="100%"></div> -->
-        <!-- <div class=""><img src="https://lh3.googleusercontent.com/proxy/89ZxUsIu2k4SXNcEYRAUiFwMiOkPFw_eK1vgoSPD5qy6xXULAJsT5Qi4ZMmgcBI4LTldVBTtI1d-7T8cbdpfJ195njz9x74" width="100%"></div> -->
-        <!-- <div style="height:100px;background-image:url('decoration.svg')"></div> -->
-        <div class=""><img crossOrigin="Anonymous" src="https://raw.githubusercontent.com/math-yew/mono/b10063c719329d3e0e47f7dde44e17b7ccbbe438/decoration.svg" width="100%"></div>
-        <div class="name">Mecham</div>
-        <div class=""><img crossOrigin="Anonymous" src="https://raw.githubusercontent.com/math-yew/mono/b10063c719329d3e0e47f7dde44e17b7ccbbe438/decoration.svg" width="100%" class="flip"></div>
-        <!-- <div class=""><img src="decoration.svg" crossOrigin="Anonymous" width="100%" class="flip"></div> -->
+      <div class="main">
+        <div class="letter ab playfair">M</div>
+        <div class="ab gap">
+          <!-- <div class=""><img src="decoration.svg" width="100%"></div> -->
+          <!-- <div class=""><img src="https://lh3.googleusercontent.com/proxy/89ZxUsIu2k4SXNcEYRAUiFwMiOkPFw_eK1vgoSPD5qy6xXULAJsT5Qi4ZMmgcBI4LTldVBTtI1d-7T8cbdpfJ195njz9x74" width="100%"></div> -->
+          <!-- <div style="height:100px;background-image:url('decoration.svg')"></div> -->
+          <div class=""><img crossOrigin="Anonymous" src="https://raw.githubusercontent.com/math-yew/mono/b10063c719329d3e0e47f7dde44e17b7ccbbe438/decoration.svg" width="100%"></div>
+          <div class="name raleway">
+            <!-- <p> -->
+              Mecham
+            <!-- </p> -->
+
+          </div>
+          <div class=""><img crossOrigin="Anonymous" src="https://raw.githubusercontent.com/math-yew/mono/b10063c719329d3e0e47f7dde44e17b7ccbbe438/decoration.svg" width="100%" class="flip"></div>
+          <!-- <div class=""><img src="decoration.svg" crossOrigin="Anonymous" width="100%" class="flip"></div> -->
+        </div>
       </div>
     </div>
 
   </div>
   <h1>Existing canvas:</h1>
-  <canvas width="1600" height="2200" style="border:solid thick purple;display:block;"></canvas>
+  <div style="display:block">
+    <canvas width="1600" height="2200"></canvas>
+  </div>
 
   <button>Run html2canvas</button>
 

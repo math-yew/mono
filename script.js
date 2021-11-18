@@ -14,8 +14,14 @@ ctx.arc(90,65,5,0,Math.PI*2,true);  // Right eye
 ctx.stroke();
 
 document.querySelector("button").addEventListener("click", function() {
-    html2canvas(document.querySelector("#content"), {canvas: canvas, useCORS: true, scale: 4, allowTaint: true, letterRendering: 1}).then(function(canvas) {
-        console.log('Drew on the existing canvas');
+    html2canvas(document.querySelector("#content"), {
+      canvas: canvas,
+      useCORS: true,
+      scale: 4,
+      allowTaint: true,
+      letterRendering: true
+    }).then(function(canvas) {
+        console.log('Canvas Generated');
         download();
     });
 }, false);
